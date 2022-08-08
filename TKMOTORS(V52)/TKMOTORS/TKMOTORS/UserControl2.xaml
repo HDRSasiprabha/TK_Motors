@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="TKMOTORS.UserControl2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TKMOTORS"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="White">
+
+        <Grid
+  Width="124" Margin="338,-9,338,9">
+            <Button
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    materialDesign:ButtonProgressAssist.Value="-1"
+    materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+    materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+    Content="WELCOME!"
+    Margin="-337,21,-336,392" FontSize="20" BorderBrush="#FF065D19" Background="#FF065D19" />
+        </Grid>
+
+        <Grid>
+            <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide3" OpeningEffect="{materialDesign:TransitionEffect FadeIn, Duration=0:0:1.10}"  Margin="-1,-10,0,3.6" RenderTransformOrigin="0.5,0.5">
+                <materialDesign:TransitioningContent.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="-0.098"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="-0.598"/>
+                    </TransformGroup>
+                </materialDesign:TransitioningContent.RenderTransform>
+
+                <Button x:Name="___No_Name_"
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    ToolTip="MaterialDesignOutlinedButton"
+                    Content="SIGN IN " Margin="24,244,515.8,180" Click="Btn_esignup" BorderBrush="#FF065D19" Foreground="#FF065D19" />
+
+            </materialDesign:TransitioningContent>
+            <Image HorizontalAlignment="Left" Height="290" Margin="294,104,0,0" VerticalAlignment="Top" Width="496" Source="UC2.png" Stretch="UniformToFill"/>
+
+
+
+        </Grid>
+
+        <ProgressBar
+  IsIndeterminate="True" Margin="10,276,500,168.6" Foreground="White" Background="#FF047D17" BorderBrush="#FF047D17" Height="Auto" />
+
+
+    </Grid>
+</UserControl>

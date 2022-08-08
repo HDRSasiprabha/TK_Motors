@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BankModelStoreContainer" CdmEntityContainer="Connectionstring">
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="BankModel.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="Client_Id" ColumnName="Client_Id" />
+          <ScalarProperty Name="Client_Name" ColumnName="Client_Name" />
+          <ScalarProperty Name="Client_Address" ColumnName="Client_Address" />
+          <ScalarProperty Name="Client_DOB" ColumnName="Client_DOB" />
+          <ScalarProperty Name="Client_Age" ColumnName="Client_Age" />
+          <ScalarProperty Name="Client_TP" ColumnName="Client_TP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

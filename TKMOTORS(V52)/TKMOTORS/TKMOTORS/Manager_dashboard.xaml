@@ -1,0 +1,42 @@
+﻿<Page x:Class="TKMOTORS.Manager_dashboard"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TKMOTORS"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1080"
+      Title="Manager_dashboard">
+
+    <Grid Background="White">
+        <Button
+            Style="{StaticResource MaterialDesignOutlinedButton}"
+            ToolTip="Employee Handling" Margin="39,155,841,395" Width="200" Height="50" Foreground="Black" BorderBrush="#FFE80303" Content="EMPLOYEE " FontWeight="Bold" Click="Btn_Emp" Background="#FFFAEECA" />
+        <Button
+            Style="{StaticResource MaterialDesignOutlinedButton}"
+            ToolTip="Inventory Handling" Margin="39,225,841,325" Width="200" Height="50" Foreground="Black" BorderBrush="#FFE80303" Content="INVENTORY " FontWeight="Bold" Click="Btn_Invenover" Background="#FFFAEECA" />
+        <Button
+            Style="{StaticResource MaterialDesignOutlinedButton}"
+            ToolTip="Report Overview" Margin="39,301,841,249" Width="200" Height="50" Foreground="Black" BorderBrush="#FFE80303" Content="REPORTS " FontWeight="Bold" Click="Btn_Repover" Background="#FFFAEECA" />
+        <Image HorizontalAlignment="Left" Height="482" Margin="275,108,0,0" VerticalAlignment="Top" Width="795" Source="4380.jpg" Stretch="UniformToFill"/>
+
+
+        <Button Content="Button" HorizontalAlignment="Left" Margin="1043,0,0,0" VerticalAlignment="Top" Width="37" Background="{x:Null}" Foreground="{x:Null}" Height="31" BorderBrush="{x:Null}" Click="Btn_close" ToolTip="Close" />
+        <materialDesign:PackIcon x:Name="btn_close" Kind="CloseCircleOutline" Margin="1043,0,1,569" Foreground="Red" Height="31" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" />
+        <Image HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="239" Source="Logo-removebg-preview (1).png"/>
+
+        <Button x:Name="btn_logout" Content="LOG OUT"   HorizontalAlignment="Left" Margin="85,520,0,0" VerticalAlignment="Top" Width="105" Height="40" Background="{x:Null}" Click="btn_logout_Click" BorderBrush="Red" Foreground="#DD000000"/>
+        <Button x:Name="btn_changePswrd"
+            Style="{StaticResource MaterialDesignOutlinedButton}"
+            ToolTip="Password Changing" Margin="39,446,841,104" Width="200" Height="50" Foreground="Black" BorderBrush="#FFE80303" Content="CHANGE PASSWORD" FontWeight="Bold" Click="btn_changePswrd_Click" Background="#FFF19959"  />
+        <TextBlock HorizontalAlignment="Left" Margin="304,10,0,0" Text="MANAGER DASHBOARD" TextWrapping="Wrap" VerticalAlignment="Top" Height="93" Width="698" Foreground="#FF1B5985" FontWeight="Bold" FontSize="72" FontFamily="Gabriola" TextAlignment="Center"/>
+        <TextBlock x:Name="displaydate_Copy" HorizontalAlignment="Left" Margin="619,103,0,0" TextWrapping="Wrap" Text="DATE : " VerticalAlignment="Top" Height="42" Width="115" FontWeight="Bold" FontSize="24" TextAlignment="Right" FontFamily="Tekton Pro Ext"/>
+        <TextBlock x:Name="displaydate" HorizontalAlignment="Left" Margin="669,103,0,0" TextWrapping="Wrap" Text="date time" VerticalAlignment="Top" Height="42" Width="333" FontWeight="Bold" FontSize="24" TextAlignment="Right" FontFamily="Tekton Pro Ext"/>
+      
+        <Button x:Name="btn_apointment"
+            Style="{StaticResource MaterialDesignOutlinedButton}"
+            ToolTip="View Appointment" Margin="39,374,841,176" Width="200" Height="50" Foreground="Black" BorderBrush="#FFE80303" Content="Appoinments " FontWeight="Bold"  Background="#FFFAEECA" Click="btn_apointment_Click" />
+        <Frame x:Name="MainFrame" />
+    </Grid>
+</Page>

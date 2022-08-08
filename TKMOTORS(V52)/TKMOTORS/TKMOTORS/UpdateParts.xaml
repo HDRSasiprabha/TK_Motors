@@ -1,0 +1,81 @@
+﻿<Page x:Class="TKMOTORS.UpdateParts"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+
+      xmlns:local="clr-namespace:TKMOTORS"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1080"
+      Title="UpdateParts" Foreground="{x:Null}" Background="White">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Untitled design (13).jpg"/>
+        </Grid.Background>
+
+        <TextBox x:Name="txt_pid"
+            materialDesign:HintAssist.Hint="Part ID"
+            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+            VerticalAlignment="Top" Margin="424,130,389,0" Foreground="Black" TextChanged="txt_pid_TextChanged" />
+        <TextBox x:Name="txt_pname"
+            materialDesign:HintAssist.Hint="Part Name"
+            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+            VerticalAlignment="Top" Margin="424,188,389,0" Foreground="Black" />
+        <TextBox x:Name="txt_price"
+            materialDesign:HintAssist.Hint="Price"
+            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+            VerticalAlignment="Top" Margin="424,252,389,0" Foreground="Black" />
+        <TextBox x:Name="txt_qinh"
+            materialDesign:HintAssist.Hint="Quantity in Hand"
+            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+            VerticalAlignment="Top" Margin="424,317,389,0" Foreground="Black" />
+
+        <Button x:Name="btn_update"
+               Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+  ToolTip="MaterialDesignFloatingActionDarkButton" Margin="530,420,492,124" Click="btn_update_Click"  Width="Auto" Background="Red">
+            <materialDesign:PackIcon
+    Kind="Update" Height="40" Width="42"/>
+        </Button>
+
+        <TextBlock HorizontalAlignment="Left" Margin="416,5,0,0" Text="Update Parts" TextWrapping="Wrap" VerticalAlignment="Top" Height="99" Width="328" FontSize="72" FontWeight="Bold" FontFamily="Gabriola" Foreground="Black"/>
+
+        <Button x:Name="btn_menu1"
+  Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+  ToolTip="MaterialDesignFloatingActionDarkButton" Margin="644,420,380,124" Click="btn_back_Click" Background="#FF047D17" RenderTransformOrigin="0.461,0.771">
+            <materialDesign:PackIcon
+    Kind="Home" Height="40" Width="42"
+     />
+        </Button>
+
+        <Button x:Name="btn_back"
+  Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+  ToolTip="MaterialDesignFloatingActionDarkButton" Margin="423,420,601,124" Click="btn_menu_Click" Background="#FF0A1165" BorderBrush="Black">
+            <materialDesign:PackIcon
+    Kind="ArrowBack" Height="40" Width="42"
+     />
+        </Button>
+
+
+
+
+        <Button Content="Button" HorizontalAlignment="Left" Margin="1036,0,0,0" VerticalAlignment="Top" Width="41" Background="{x:Null}" Foreground="{x:Null}" Height="41" BorderBrush="{x:Null}" Click="Button_Click" />
+        <materialDesign:PackIcon Kind="CloseCircleOutline" Margin="1052,2,0,0" Foreground="Red" Height="24" Width="25" />
+
+
+        <materialDesign:PackIcon Kind="CardAccountDetails" Margin="401,147,0,0" Foreground="#FF0C0B0B" Height="20" Width="20" />
+        <materialDesign:PackIcon Kind="RenameBox" Margin="401,205,0,0" Foreground="#FF0C0B0B" Height="20" Width="20" />
+        <materialDesign:PackIcon Kind="Cash" Margin="401,269,0,0" Foreground="#FF0C0B0B" Height="20" Width="20" />
+        <materialDesign:PackIcon Kind="HelpBox" Margin="401,335,0,0" Foreground="#FF0C0B0B" Height="20" Width="20" />
+
+        <Label x:Name="lbl_pname" Content="" HorizontalAlignment="Left" Margin="424,225,0,0" VerticalAlignment="Top" Width="261" Height="22" Foreground="#DDEB3939" FontSize="10"/>
+        <Label x:Name="lbl_price" Content="" HorizontalAlignment="Left" Margin="426,287,0,0" VerticalAlignment="Top" Width="261" Height="25" Foreground="#DDEB3939" FontSize="10"/>
+        <Label x:Name="lbl_qinh" Content="" HorizontalAlignment="Left" Margin="424,359,0,0" VerticalAlignment="Top" Width="254" Height="24" Foreground="#DDEB3939" FontSize="10"/>
+        <Label x:Name="lbl_pid" Content="" HorizontalAlignment="Left" Margin="423,167,0,0" VerticalAlignment="Top" Width="261" Height="22" Foreground="#DDEB3939" FontSize="10"/>
+
+        <Frame x:Name="upframe"/>
+
+
+    </Grid>
+</Page>

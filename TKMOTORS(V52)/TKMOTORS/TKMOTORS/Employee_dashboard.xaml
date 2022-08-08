@@ -1,0 +1,65 @@
+﻿<Page x:Class="TKMOTORS.Employee_dashboard"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TKMOTORS"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1080"
+      Title="Employee_dashboard">
+
+    <Grid Height="600" Width="1080">
+        <Grid.Background>
+            <ImageBrush ImageSource="Ins dash.png"/>
+        </Grid.Background>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="Select The Job" TextWrapping="Wrap" VerticalAlignment="Top" Height="109" Width="655" FontSize="72" FontWeight="Bold" FontFamily="Gabriola" Foreground="White"/>
+
+        <RadioButton
+  Style="{StaticResource MaterialDesignChoiceChipOutlineRadioButton}"
+  GroupName="GroupChoiceChipOutline"
+  Content="Paint" Background="#89FFFAFA" BorderBrush="#FFE9E9F0" Foreground="#DDFFF1F1" Margin="30,134,0,416" Width="194" Height="50"/>
+        <RadioButton
+            Style="{StaticResource MaterialDesignChoiceChipOutlineRadioButton}"
+            GroupName="GroupChoiceChipOutline"
+            Content="Mechanic" Background="#89FFFAFA" BorderBrush="#FFE9E9F0" Foreground="#DDFFF1F1" Margin="30,205,0,345" Width="194" Height="50"/>
+        <RadioButton
+            Style="{StaticResource MaterialDesignChoiceChipOutlineRadioButton}"
+            GroupName="GroupChoiceChipOutline"
+            Content="Accident" Background="#89FFFAFA" BorderBrush="#FFE9E9F0" Foreground="#DDFFF1F1" Margin="30,275,0,275" Width="194" Height="50"/>
+
+        <Button Content="Button" HorizontalAlignment="Left" Margin="1048,10,0,0" VerticalAlignment="Top" Width="22" Background="{x:Null}" Foreground="{x:Null}" Height="16" BorderBrush="{x:Null}"/>
+        <materialDesign:PackIcon Kind="CloseCircle" Margin="1052,2,0,0" Foreground="White" Height="24" Width="25" />
+        <Button
+  Style="{StaticResource MaterialDesignFloatingActionAccentButton}"
+  ToolTip="MaterialDesignFloatingActionAccentButton" Margin="97,349,927,195" RenderTransformOrigin="0.5,0.5" Foreground="#DDFFFBFB" Background="{x:Null}" BorderBrush="White">
+
+            <materialDesign:PackIcon
+    Kind="Check" Height="50" Width="38"
+     />
+        </Button>
+
+
+        <Button x:Name="btn_menu"
+  Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+  ToolTip="MaterialDesignFloatingActionDarkButton" Margin="116,508,896,25" Click="btn_menu_Click" Background="{x:Null}" Width="Auto" BorderBrush="White" Height="Auto">
+            <materialDesign:PackIcon
+    Kind="Home" Height="40" Width="42"
+     />
+        </Button>
+
+
+        <Button x:Name="btn_back"
+            Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+            ToolTip="MaterialDesignFloatingActionDarkButton" Margin="26,508,986,25" Click="btn_back_Click" Background="{x:Null}" Width="Auto" BorderBrush="White" Height="Auto">
+            <materialDesign:PackIcon
+                Kind="ArrowBack" Height="40" Width="42"
+     />
+        </Button>
+
+
+
+
+
+    </Grid>
+</Page>

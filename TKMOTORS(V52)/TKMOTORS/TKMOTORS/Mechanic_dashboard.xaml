@@ -1,0 +1,47 @@
+﻿<Page x:Class="TKMOTORS.Mechanic_dashboard"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TKMOTORS"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1080"
+      Title="Mechanic_dashboard" Width="1080" Height="600">
+    <Page.Background>
+        <ImageBrush ImageSource="car-mechanic-wearing-white-uniform-stand-holding-wrench.jpg"/>
+    </Page.Background>
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="car-mechanic-wearing-white-uniform-stand-holding-wrench.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+
+
+
+
+
+        <Button x:Name="btn_Pending"
+Style="{StaticResource MaterialDesignOutlinedButton}"
+ToolTip="MaterialDesignOutlinedButton"
+Content="CHECK PENDING JOBS" Margin="25,123,833,370" Height="Auto" Foreground="White" Click="btn_Pending_Click" />
+        <Button x:Name="btn_Ongoing"
+Style="{StaticResource MaterialDesignOutlinedButton}"
+ToolTip="MaterialDesignOutlinedButton"
+Content="ON GOING JOBS" Margin="25,257,833,236" Height="Auto" Foreground="White" Click="btn_Ongoing_Click" />
+        <Button x:Name="bn_NewJob"
+Style="{StaticResource MaterialDesignOutlinedButton}"
+ToolTip="MaterialDesignOutlinedButton"
+Content="NEW JOBS" Margin="25,390,833,103" Height="Auto" Foreground="White" Click="bn_NewJob_Click_2" />
+        <Button Content="Button" HorizontalAlignment="Left" Margin="1043,0,0,0" VerticalAlignment="Top" Width="37" Background="{x:Null}" Foreground="{x:Null}" Height="32" BorderBrush="{x:Null}" Click="Button_Click" />
+        <materialDesign:PackIcon Kind="CloseCircleOutline" Margin="1043,0,0,0" Foreground="White" Width="37" Height="32" />
+        <Button x:Name="btn_logout"
+            Style="{StaticResource MaterialDesignOutlinedButton}"
+            ToolTip="MaterialDesignOutlinedButton" Margin="46,507,911,48" Height="Auto" Foreground="White" BorderBrush="#FF689302" Content="LOG OUT" Click="btn_logout_Click" />
+        <Label Content="Select The Button And Continue To" HorizontalAlignment="Left" Margin="25,35,0,0" VerticalAlignment="Top" Height="83" Width="543" Foreground="#DDFFFFFF" FontSize="28" FontWeight="Bold"/>
+
+
+        <Frame x:Name="mecframe"  />
+    </Grid>
+</Page>

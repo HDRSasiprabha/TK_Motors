@@ -1,0 +1,34 @@
+﻿<Window x:Class="TKMOTORS.QR"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TKMOTORS"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="QR" Height="600" Width="1080" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
+    <Grid Width="1080" Height="600">
+        <ComboBox x:Name="cboDevice" HorizontalAlignment="Left" Margin="796,266,0,0" VerticalAlignment="Top" Width="204"/>
+        <Label Content="camera" HorizontalAlignment="Left" Margin="721,267,0,0" VerticalAlignment="Top"/>
+
+
+        <Button x:Name="btn_close1" Content="" HorizontalAlignment="Left" Margin="1021,0,0,0" VerticalAlignment="Top" Width="59" Background="{x:Null}" Foreground="{x:Null}" Height="53" BorderBrush="{x:Null}" Click="btn_close1_Click" />
+        <materialDesign:PackIcon Kind="CloseCircleOutline" Margin="1021,0,0,547" Foreground="#FFFD0000" Height="Auto" Width="59" VerticalAlignment="Stretch" RenderTransformOrigin="0.696,0.408" />
+
+        <Button x:Name="btnStart"
+  Style="{DynamicResource MaterialDesignRaisedButton}"
+  materialDesign:ShadowAssist.ShadowDepth="Depth5"
+  Content="START" Margin="826,323,132.6,228.6" Height="Auto"  Background="#FFD1C8C8" Foreground="#DD000000" BorderBrush="#FFFF0101" Click="btnStart_Click" />
+
+
+
+
+
+        <TextBox x:Name="txtQRCode" HorizontalAlignment="Left" Height="138" Margin="193,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Grid.Column="1" Visibility="Hidden"/>
+        <Image x:Name="pictureBox1" HorizontalAlignment="Left" Height="467" Margin="20,88,0,0" VerticalAlignment="Top" Width="548"/>
+        <materialDesign:Badged Content="Badged" HorizontalAlignment="Left" Height="100" Margin="1094,457,-122,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="btn_win" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="286,368,0,0" VerticalAlignment="Top" Width="75"  Background="#FFA0220D" BorderBrush="#FFA0220D" Visibility="Hidden"/>
+        <TextBlock HorizontalAlignment="Left" Margin="746,384,0,0" TextWrapping="Wrap" Text="*Please show your QR code to your web camera" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

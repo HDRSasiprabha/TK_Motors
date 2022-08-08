@@ -1,0 +1,707 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{35F21905-99C1-4FAC-961E-921C03396DD6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TKMOTORS</RootNamespace>
+    <AssemblyName>TKMOTORS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlzEx, Version=4.0.0.0, Culture=neutral, PublicKeyToken=69f1c32f803d307e, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.4.3.0\lib\net462\ControlzEx.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=2.0.0.0, Culture=neutral, PublicKeyToken=51482d6f650b2b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.2.0.0\lib\net47\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=2.0.2.2558, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.2.0.2-ci2558\lib\net452\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.MahApps, Version=0.1.8.2558, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.MahApps.0.1.8-ci2558\lib\net452\MaterialDesignThemes.MahApps.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=4.1.1.2558, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.4.1.1-ci2558\lib\net452\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="QRCoder, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.4.1\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="zxing, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Accident_page.xaml.cs">
+      <DependentUpon>Accident_page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddParts.xaml.cs">
+      <DependentUpon>AddParts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AnuualSalesReport.xaml.cs">
+      <DependentUpon>AnuualSalesReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier_dashboard.xaml.cs">
+      <DependentUpon>Cashier_dashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.xaml.cs">
+      <DependentUpon>ChangePassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectDB.cs" />
+    <Compile Include="createqotation.xaml.cs">
+      <DependentUpon>createqotation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="customerDetailsReport.xaml.cs">
+      <DependentUpon>customerDetailsReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Customerregisterwindow.xaml.cs">
+      <DependentUpon>Customerregisterwindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.cs">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="empDetails.xaml.cs">
+      <DependentUpon>empDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeHandling.xaml.cs">
+      <DependentUpon>EmployeeHandling.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employeeloginwindow.xaml.cs">
+      <DependentUpon>Employeeloginwindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employeesignupwindow.xaml.cs">
+      <DependentUpon>Employeesignupwindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_dashboard.xaml.cs">
+      <DependentUpon>Employee_dashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FileUpload.xaml.cs">
+      <DependentUpon>FileUpload.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InspectorDashboardWindow.xaml.cs">
+      <DependentUpon>InspectorDashboardWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryHandling.xaml.cs">
+      <DependentUpon>InventoryHandling.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="invoicePage.xaml.cs">
+      <DependentUpon>invoicePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JobOverview.xaml.cs">
+      <DependentUpon>JobOverview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerLoginForAddEmployee.xaml.cs">
+      <DependentUpon>ManagerLoginForAddEmployee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Managerlogininwindow.xaml.cs">
+      <DependentUpon>Managerlogininwindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_dashboard.xaml.cs">
+      <DependentUpon>Manager_dashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mechanic_dashboard.xaml.cs">
+      <DependentUpon>Mechanic_dashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mechanic_page.xaml.cs">
+      <DependentUpon>Mechanic_page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Newjob.xaml.cs">
+      <DependentUpon>Newjob.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ongoing.xaml.cs">
+      <DependentUpon>Ongoing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Painter_page.xaml.cs">
+      <DependentUpon>Painter_page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PendingJob.xaml.cs">
+      <DependentUpon>PendingJob.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QR.xaml.cs">
+      <DependentUpon>QR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Quotation.xaml.cs">
+      <DependentUpon>Quotation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveEmployee.xaml.cs">
+      <DependentUpon>RemoveEmployee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveParts.xaml.cs">
+      <DependentUpon>RemoveParts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.xaml.cs">
+      <DependentUpon>Reports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReport.xaml.cs">
+      <DependentUpon>SalesReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TKMotorsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TKMotorsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TKMotorsDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TKMotorsDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TKMotorsDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TKMotorsDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TKMotorsDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TKMotorsDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TKMotorsDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TKMotorsDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TKMotorsDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TKMotorsDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateEmployee.xaml.cs">
+      <DependentUpon>UpdateEmployee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateParts.xaml.cs">
+      <DependentUpon>UpdateParts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl2.xaml.cs">
+      <DependentUpon>UserControl2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl3.xaml.cs">
+      <DependentUpon>UserControl3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle_registration.xaml.cs">
+      <DependentUpon>Vehicle_registration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="viewAppoinment.xaml.cs">
+      <DependentUpon>viewAppoinment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewEmployee.xaml.cs">
+      <DependentUpon>ViewEmployee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewParts.xaml.cs">
+      <DependentUpon>ViewParts.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Accident_page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddParts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AnuualSalesReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cashier_dashboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChangePassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="createqotation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="customerDetailsReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Customerregisterwindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="empDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EmployeeHandling.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Employeeloginwindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Employeesignupwindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Employee_dashboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FileUpload.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InspectorDashboardWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InventoryHandling.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="invoicePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JobOverview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="ManagerLoginForAddEmployee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Managerlogininwindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager_dashboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Mechanic_dashboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Mechanic_page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Newjob.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ongoing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Painter_page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PendingJob.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Quotation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RemoveEmployee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RemoveParts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SalesReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateEmployee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateParts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vehicle_registration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="viewAppoinment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewEmployee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewParts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCus.rdlc" />
+    <EmbeddedResource Include="Reportemp.rdlc" />
+    <EmbeddedResource Include="ReportSales.rdlc" />
+    <EmbeddedResource Include="ReportStock.rdlc" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TKMotorsDataSet.xsc">
+      <DependentUpon>TKMotorsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TKMotorsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TKMotorsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TKMotorsDataSet.xss">
+      <DependentUpon>TKMotorsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TKMotorsDataSet1.xsc">
+      <DependentUpon>TKMotorsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TKMotorsDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TKMotorsDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TKMotorsDataSet1.xss">
+      <DependentUpon>TKMotorsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TKMotorsDataSet2.xsc">
+      <DependentUpon>TKMotorsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TKMotorsDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TKMotorsDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TKMotorsDataSet2.xss">
+      <DependentUpon>TKMotorsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TKMotorsDataSet3.xsc">
+      <DependentUpon>TKMotorsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="TKMotorsDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TKMotorsDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TKMotorsDataSet3.xss">
+      <DependentUpon>TKMotorsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="TKMotorsDataSet4.xsc">
+      <DependentUpon>TKMotorsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="TKMotorsDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TKMotorsDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TKMotorsDataSet4.xss">
+      <DependentUpon>TKMotorsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="TKMotorsDataSet5.xsc">
+      <DependentUpon>TKMotorsDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="TKMotorsDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TKMotorsDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TKMotorsDataSet5.xss">
+      <DependentUpon>TKMotorsDataSet5.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Main Window Images\20618.jpg" />
+    <Resource Include="Main Window Images\Logo-removebg-preview %281%29.png" />
+    <Resource Include="Main Window Images\manager-clip-art.png" />
+    <Resource Include="Main Window Images\UC2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Logo-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="20618.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UC2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="17205.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="manager-clip-art.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\17207.png" />
+    <Resource Include="Img\19728.jpg" />
+    <Resource Include="Img\4356046.jpg" />
+    <Resource Include="Img\Accidentpagebg.png" />
+    <Resource Include="Img\car-35079_1280.png" />
+    <Resource Include="Img\car-mechanic-wearing-white-uniform-stand-holding-wrench.jpg" />
+    <Resource Include="Img\close-up-hand-holding-pen-write-removebg-preview.png" />
+    <Resource Include="Img\Edited Vehicle Details.png" />
+    <Resource Include="Img\Ins dash.png" />
+    <Resource Include="Img\Painter Background.png" />
+    <Resource Include="Img\pngfind.com-bank-png-1675234.png" />
+    <Resource Include="Img\Untitled design %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Untitled design %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="17207.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="19728.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Edited Vehicle Details.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Painter Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="mechanic page.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Accidentpagebg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pngfind.com-bank-png-1675234.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ins dash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="4356046.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="car-mechanic-wearing-white-uniform-stand-holding-wrench.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Untitled design %2816%29.png" />
+    <Resource Include="Untitled design %2815%29.png" />
+    <Resource Include="Untitled design %2814%29.png" />
+    <Resource Include="Untitled design %2813%29.jpg" />
+    <Resource Include="Untitled design %2812%29.png" />
+    <Resource Include="employee handling.jpg" />
+    <Resource Include="3297225.jpg" />
+    <Resource Include="3515462.jpg" />
+    <Resource Include="20943526.jpg" />
+    <Resource Include="4957136.jpg" />
+    <Resource Include="496130-PHGFIZ-389.jpg" />
+    <Resource Include="mechanic page.png" />
+    <Resource Include="395.jpg" />
+    <Resource Include="4380.jpg" />
+    <Resource Include="Employee sign in.png" />
+    <Resource Include="Employee sign in 2.png" />
+    <Resource Include="login.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MaterialDesignThemes.4.1.1-ci2558\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.1.1-ci2558\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.4.1.1-ci2558\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.4.1.1-ci2558\build\MaterialDesignThemes.targets'))" />
+  </Target>
+</Project>

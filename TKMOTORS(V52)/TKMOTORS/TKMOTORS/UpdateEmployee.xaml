@@ -1,0 +1,126 @@
+﻿<Page x:Class="TKMOTORS.UpdateEmployee"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TKMOTORS"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1080"
+      Title="UpdateEmployee" Background="#FFFCFCFC">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+
+
+
+
+        <materialDesign:Card
+  materialDesign:ShadowAssist.ShadowDepth="Depth5"
+  Padding="32"
+  Content="" Margin="20,75,614,80" Background="#FFBCBDCE" RenderTransformOrigin="0.5,0.5" >
+            <materialDesign:Card.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </materialDesign:Card.RenderTransform>
+        </materialDesign:Card>
+
+
+
+
+
+        <TextBox x:Name="txt_ename"
+            materialDesign:HintAssist.Hint="First Name"
+            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+            VerticalAlignment="Top" Margin="85,141,732,0" />
+        <materialDesign:PackIcon Kind="AccountEdit" Margin="45,159,0,0" Height="19" Width="25" />
+        <TextBox x:Name="txt_address"
+            materialDesign:HintAssist.Hint="Address"
+            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+            VerticalAlignment="Top" Margin="85,204,732,0" />
+        <materialDesign:PackIcon Kind="MapMarker" Margin="45,222,0,0" Height="19" Width="19" />
+        <TextBox x:Name="txt_tp"
+            materialDesign:HintAssist.Hint="Contact Number"
+            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+            VerticalAlignment="Top" Margin="85,259,732,0" Height="41" />
+        <materialDesign:PackIcon Kind="Phone" Margin="45,282,0,0" Height="19" />
+        <TextBox x:Name="txt_nic"
+            materialDesign:HintAssist.Hint="NIC"
+            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+            VerticalAlignment="Top" Margin="85,316,732,0" />
+        <materialDesign:PackIcon Kind="CardAccountDetails" Margin="45,334,0,0" Height="19" Width="16" RenderTransformOrigin="6.213,0.779" />
+        <TextBox x:Name="txt_email"
+            materialDesign:HintAssist.Hint="Email"
+            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+            VerticalAlignment="Center" Margin="85,375,732,188" />
+        <materialDesign:PackIcon Kind="Email" Margin="42,388,0,0" Height="16" Width="22" />
+        <Label Content="Please Select The Option Below:" HorizontalAlignment="Left" Margin="45,436,0,0" VerticalAlignment="Top" Width="260"/>
+        <ListBox
+            Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}"
+            x:Name="RadioButtonGroupChoiceChipPrimaryOutline" Margin="45,465,676,93">
+            <ListBoxItem x:Name="Rbtn_Mech"
+                Content="Mechanic" />
+            <ListBoxItem x:Name="Rbtn_Painter"
+                IsSelected="True"
+                Content="Painter" />
+            <ListBoxItem x:Name="Rbtn_Repair"
+                Content="Repair" />
+            <ListBoxItem x:Name="Rbtn_Inspector"
+                         Content="Inspector"/>
+            <ListBoxItem x:Name="Rbtn_Cashier"
+                         Content="Cashier"/>
+
+        </ListBox>
+        <TextBox x:Name="txt_eid"
+            materialDesign:HintAssist.Hint="Enter Employee Number Here"
+            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+            VerticalAlignment="Top" Margin="85,88,732,0" TextChanged="txt_eid_TextChanged" />
+        <Button x:Name="btn_menu1"
+  Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+  ToolTip="MaterialDesignFloatingActionDarkButton" Margin="338,533,686,11" Click="btn_back_Click" Background="#FF047D17">
+            <materialDesign:PackIcon
+    Kind="Home" Height="40" Width="42"
+     />
+        </Button>
+
+
+
+        <Button x:Name="btn_back"
+  Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+  ToolTip="MaterialDesignFloatingActionDarkButton" Margin="51,533,973,11" Click="btn_menu_Click" Background="#FF047D17" Width="Auto">
+            <materialDesign:PackIcon
+    Kind="ArrowBack" Height="40" Width="42"
+     />
+        </Button>
+
+
+        <Button x:Name="btn_update"
+  Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+  ToolTip="MaterialDesignFloatingActionDarkButton" Margin="200,533,827,11" Click="btn_update_Click" Background="#FFFF2500" Height="Auto" Width="Auto" BorderBrush="Black">
+            <materialDesign:PackIcon
+    Kind="Update" Height="40" Width="42"
+     />
+        </Button>
+        <Image HorizontalAlignment="Left" Height="442" Margin="499,96,0,0" VerticalAlignment="Top" Width="571" Source="20943526.jpg" Stretch="UniformToFill"/>
+        <materialDesign:PackIcon Kind="CloseCircleOutline" Foreground="Red" Height="32" Width="37" RenderTransformOrigin="-0.442,1.705" HorizontalAlignment="Right" />
+        <Button Content="Button" Margin="1043,0,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="{x:Null}" Height="32" Width="37" BorderBrush="{x:Null}" RenderTransformOrigin="0.501,0.5" Click="Button_Click_1" />
+        <TextBlock HorizontalAlignment="Left" Text="Update Employee" TextWrapping="Wrap" VerticalAlignment="Top" Height="91" Width="448" FontSize="72" FontWeight="Bold" FontFamily="Gabriola" Margin="469,0,0,0" TextAlignment="Center" Foreground="#FF1B5985"/>
+
+        <materialDesign:PackIcon Kind="IdCardOutline" Margin="39,106,0,0" Height="19" Width="28" />
+
+        <Label x:Name="lbl_eid" Content="" HorizontalAlignment="Left" Margin="87,130,0,0" VerticalAlignment="Top" Width="261" Height="22" Foreground="#DDEB3939" FontSize="10"/>
+        <Label x:Name="lbl_ename" Content="" HorizontalAlignment="Left" Margin="87,183,0,0" VerticalAlignment="Top" Width="261" Height="22" Foreground="#DDEB3939" FontSize="10"/>
+        <Label x:Name="lbl_add" Content="" HorizontalAlignment="Left" Margin="85,246,0,0" VerticalAlignment="Top" Width="261" Height="22" Foreground="#DDEB3939" FontSize="10"/>
+        <Label x:Name="lbl_tp" Content="" HorizontalAlignment="Left" Margin="85,301,0,0" VerticalAlignment="Top" Width="261" Height="22" Foreground="#DDEB3939" FontSize="10"/>
+        <Label x:Name="lbl_nic" Content="" HorizontalAlignment="Left" Margin="87,353,0,0" VerticalAlignment="Top" Width="261" Height="22" Foreground="#DDEB3939" FontSize="10"/>
+        <Label x:Name="lbl_email" Content="" HorizontalAlignment="Left" Margin="85,414,0,0" VerticalAlignment="Top" Width="261" Height="22" Foreground="#DDEB3939" FontSize="10"/>
+        <Frame x:Name="uempframe"/>
+    </Grid>
+</Page>

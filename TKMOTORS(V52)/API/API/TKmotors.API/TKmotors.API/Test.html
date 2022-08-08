@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        function AddEmp() {
+
+            var App = {};
+            App.CustomerName = 'Test';//Assign from Textbox
+            App.VehicleNo = 'WP AA 1111';//Assign from Textbox
+            App.TelephoneNo = '0112345678';//Assign from Textbox
+            App.AppointmentDate = '7/14/2021';//Assign from Textbox
+
+
+            $.ajax({
+                url: "http://localhost/TKmotors.API/api/Appointment",
+                type: "POST",
+                contentType: "application/json;charset=utf-8",
+                data: JSON.stringify(App),
+                dataType: "json",
+                success: function (response) {
+
+                    alert(response);
+
+                },
+
+                error: function (x, e) {
+                    alert('Failed');
+                    alert(x.responseText);
+                    alert(x.status);
+
+                }
+            });
+
+        }
+
+        $(document).ready(function () {
+
+            $("#btnSave").click(function (e) {
+
+                AddEmp();
+                e.preventDefault();
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <input id="btnSave" type="button" value="button" />
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="TKMOTORS.UserControl3"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TKMOTORS"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="#FFFFFBFB">
+
+
+        <Grid
+  Width="124" Margin="338,-9,338,9">
+            <Button
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    materialDesign:ButtonProgressAssist.Value="-1"
+    materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+    materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+    Content="WELCOME!"
+    Margin="-337,21,-336,392" FontSize="20" BorderBrush="#FF065D19" Background="#FF065D19" />
+        </Grid>
+
+
+        <Image HorizontalAlignment="Left" Height="386" Margin="450,54,0,9.6" VerticalAlignment="Center" Width="299" Source="manager-clip-art.png" Stretch="UniformToFill"/>
+
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide3" OpeningEffect="{materialDesign:TransitionEffect FadeIn, Duration=0:0:1.10}" Margin="-10,0,0,-0.4">
+
+            <Button
+            Style="{StaticResource MaterialDesignOutlinedButton}"
+          
+            Content="SIGN IN" Margin="81,209,459,209" Click="Btn_msignin" >
+
+            </Button>
+        </materialDesign:TransitioningContent>
+        <ProgressBar
+  IsIndeterminate="True" Margin="54,246,436,200" Foreground="White" Background="#FF047D17" BorderBrush="#FF047D17" />
+
+    </Grid>
+</UserControl>

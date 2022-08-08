@@ -1,0 +1,210 @@
+﻿<Page x:Class="TKMOTORS.Painter_page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:TKMOTORS"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1080"
+      Title="Painter_page">
+    <Page.Background>
+        <ImageBrush ImageSource="Painter Background.png"/>
+    </Page.Background>
+
+    <Grid Height="600">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
+
+
+
+        <materialDesign:Card
+            materialDesign:ShadowAssist.ShadowDepth="Depth3"
+            materialDesign:ShadowAssist.ShadowEdges="Bottom,Left"
+            Padding="32"
+            Content="" Margin="12,431,914,130"  Foreground="{x:Null}" Background="#FF515151" />
+
+
+
+
+
+        <materialDesign:Card
+            materialDesign:ShadowAssist.ShadowDepth="Depth3"
+            materialDesign:ShadowAssist.ShadowEdges="Bottom,Left"
+            Padding="32"
+            Content="" Margin="10,392,853,183"  Foreground="{x:Null}" Background="#FF515151" />
+
+
+        <materialDesign:Card
+            materialDesign:ShadowAssist.ShadowDepth="Depth3"
+            materialDesign:ShadowAssist.ShadowEdges="Bottom,Left"
+            Padding="32"
+            Content="" Margin="222,466,674,95"  Foreground="{x:Null}" Background="#FF515151" />
+
+
+
+        <Label Content="Fill The Data" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#DDFFFFFF" FontSize="48" FontWeight="Normal" FontFamily="Montserrat" Height="66" Width="269"/>
+
+
+        <Label Content="Select The Parts That You Want To Paint:" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Foreground="#DDFFFFFF" FontSize="18" Width="325" Height="32"/>
+
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide13" OpeningEffect="{materialDesign:TransitionEffect FadeIn, Duration=0:0:0.8}">
+
+            <Label Content="Write Down The Color Code Here:" HorizontalAlignment="Left" Margin="10,349,0,0" VerticalAlignment="Top" Foreground="#DDFFFFFF" FontSize="18" Width="325" Height="32"/>
+        </materialDesign:TransitioningContent>
+
+        <TextBox x:Name="txt_Colorcd" HorizontalAlignment="Left" Margin="10,394,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217" Background="{x:Null}" BorderBrush="#89FFFFFF" Foreground="White" CaretBrush="#FFFDFDFD" Height="20"/>
+
+
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide4" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.8}">
+
+            <CheckBox x:Name="Cb_Complete"
+    Style="{StaticResource MaterialDesignFilterChipAccentCheckBox}"
+    IsChecked="False" Margin="10,243,0,333" Foreground="#FFFAF0F0" Height="Auto" Width="85">
+                Complete
+            </CheckBox>
+        </materialDesign:TransitioningContent>
+
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide11" OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:0.8}">
+            <CheckBox x:Name="Cb_hood"
+    Style="{StaticResource MaterialDesignFilterChipAccentCheckBox}"
+    IsChecked="False" Margin="163,280,0,296" Foreground="#DDFFFFFF" Height="Auto" Width="64">
+                Hood
+            </CheckBox>
+        </materialDesign:TransitioningContent>
+
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide6" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.8}">
+
+            <CheckBox x:Name="Cb_Roof"
+    Style="{StaticResource MaterialDesignFilterChipAccentCheckBox}"
+    IsChecked="False" Margin="13,317,0,259" Foreground="#DDFFFFFF" Height="Auto" Width="59">
+                Roof
+            </CheckBox>
+        </materialDesign:TransitioningContent>
+
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide1" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.8}">
+
+            <CheckBox x:Name="Cb_LFdoor"
+    Style="{StaticResource MaterialDesignFilterChipAccentCheckBox}"
+    IsChecked="True" Margin="10,132,0,444" Foreground="#FFFAF0F0" Height="Auto" Width="115">
+                Left Front Door
+            </CheckBox>
+        </materialDesign:TransitioningContent>
+
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide2" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.8}">
+
+            <CheckBox x:Name="Cb_RFdoor"
+    Style="{StaticResource MaterialDesignFilterChipAccentCheckBox}"
+    IsChecked="False" Margin="10,169,0,407" Foreground="#FFFAF0F0" Height="Auto" Width="123">
+                Right Front Door
+            </CheckBox>
+        </materialDesign:TransitioningContent>
+
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide9" OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:0.8}">
+            <CheckBox x:Name="Cb_tail"
+    Style="{StaticResource MaterialDesignFilterChipAccentCheckBox}"
+    IsChecked="False" Margin="163,243,0,333" Foreground="#FFFAF0F0" Height="Auto" Width="79">
+                Tail Gate
+            </CheckBox>
+        </materialDesign:TransitioningContent>
+
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide8" OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:0.8}">
+
+            <CheckBox x:Name="Cb_LRdoor"
+    Style="{StaticResource MaterialDesignFilterChipAccentCheckBox}"
+    IsChecked="False" Margin="163,169,0,407" Foreground="#DDFFFFFF" Height="Auto" Width="110">
+                Left Rear Door
+            </CheckBox>
+        </materialDesign:TransitioningContent>
+
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide7" OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:0.8}">
+
+            <CheckBox x:Name="Cb_RRdoor"
+    Style="{StaticResource MaterialDesignFilterChipAccentCheckBox}"
+    IsChecked="False" Margin="163,132,0,444" Foreground="#DDFFFFFF" Content="Right Rear Door" Height="Auto" Width="119"/>
+        </materialDesign:TransitioningContent>
+
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide5" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.8}">
+
+            <CheckBox x:Name="Cb_fender"
+    Style="{StaticResource MaterialDesignFilterChipAccentCheckBox}"
+    IsChecked="False" Margin="10,280,0,296" Foreground="#DDFFFFFF" Height="Auto" Width="76">
+                Fenders
+            </CheckBox>
+        </materialDesign:TransitioningContent>
+
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide10" OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:0.8}">
+            <CheckBox x:Name="Cb_under"
+    Style="{StaticResource MaterialDesignFilterChipAccentCheckBox}"
+    IsChecked="False" Margin="163,206,0,370" Foreground="#DDFFFFFF" Height="Auto" Width="94">
+                Under Coat
+            </CheckBox>
+        </materialDesign:TransitioningContent>
+
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide3" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.8}">
+
+            <CheckBox x:Name="Cb_Qpanel"
+    Style="{StaticResource MaterialDesignFilterChipAccentCheckBox}"
+    IsChecked="False" Margin="10,206,0,370" Foreground="#DDFFFFFF" Height="Auto" Width="102">
+                Quater Panel
+            </CheckBox>
+        </materialDesign:TransitioningContent>
+
+
+
+        <CheckBox x:Name="CB_doc" Content="Include documents" HorizontalAlignment="Left" Margin="21,445,0,0" VerticalAlignment="Top" Background="White" Foreground="WhiteSmoke" BorderBrush="White"/>
+        <Button x:Name="btn_Continue"
+            Style="{StaticResource MaterialDesignOutlinedButton}"
+            ToolTip="MaterialDesignOutlinedButton"
+            Content="CONTINUE" Margin="10,550,952,10" BorderBrush="#FFF9F9F9" Foreground="White" Click="Btn_continue" Height="Auto" />
+
+        <Button Content="Button" HorizontalAlignment="Left" Margin="1043,0,0,0" VerticalAlignment="Top" Width="37" Background="{x:Null}" Foreground="{x:Null}" Height="31" BorderBrush="{x:Null}" />
+        <materialDesign:PackIcon Kind="CloseCircleOutline" Margin="1043,0,0,0" Foreground="#FF0B0B0B" Height="31" Width="37" />
+        <TextBox x:Name="txt_Jobid" HorizontalAlignment="Left" Height="23" Margin="189,567,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="White" Visibility="Hidden"/>
+        <TextBox x:Name="txt_vehicleNumber" HorizontalAlignment="Left" Height="35" Margin="222,470,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="183" CaretBrush="White" Foreground="White" SelectionBrush="White" OpacityMask="White" BorderBrush="#89FFFFFF" Background="{x:Null}"/>
+
+
+
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide12" OpeningEffect="{materialDesign:TransitionEffect FadeIn, Duration=0:0:0.8}">
+
+            <Label Content="Enter Vehicle Number" HorizontalAlignment="Left" Margin="10,468,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="White" Foreground="#DDFFFFFF" Width="217" FontSize="20" FontStyle="Italic" Height="37"/>
+
+        </materialDesign:TransitioningContent>
+
+
+
+        <TextBlock x:Name="txt_JID" HorizontalAlignment="Left" Margin="862,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="144" Height="82"/>
+
+
+
+       
+
+
+        <Button x:Name="btn_back"
+            Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+            ToolTip="MaterialDesignFloatingActionDarkButton" Margin="914,523,98,10" Click="btn_back_Click" Background="{x:Null}" Width="Auto" BorderBrush="White" Height="Auto">
+            <materialDesign:PackIcon
+                Kind="ArrowBack" Height="40" Width="42"
+     />
+        </Button>
+
+
+
+
+
+
+
+
+        <Frame Name="Pframe"  />
+
+
+
+
+
+
+    </Grid>
+</Page>
